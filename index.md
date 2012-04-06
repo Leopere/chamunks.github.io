@@ -5,20 +5,6 @@ tagline: aguslr.github.com
 ---
 {% include JB/setup %}
 
-## Update Author Attributes
-
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
-
-The theme should reference these variables whenever needed.
-    
 ## Recent Posts
 
 <ul class="posts">
