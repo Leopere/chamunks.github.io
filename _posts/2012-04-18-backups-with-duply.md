@@ -9,9 +9,9 @@ tags: [post, blog, linux, desktop, server, backup, duplicity]
 
 
 ## A frontend for Duplicity
-[Duply](http://duply.net/) is *a frontend for the mighty [duplicity](http://duplicity.nongnu.org/) magic* and a really nifty one. Anybody that has used duplicity for backups may have noticed two things: how powerful and versatile a tool it is, and how tricky it can be to configure a backup scheme.
+[Duply][1] is *a frontend for the mighty [duplicity][2] magic* and a really nifty one. Anybody that has used duplicity for backups may have noticed two things: how powerful and versatile a tool it is, and how tricky it can be to configure a backup scheme.
 
-First of all, let's just talk a little bit about the backend, that is, Duplicity. As the [Wikipedia article](https://en.wikipedia.org/wiki/Duplicity_%28software%29) nicely points out, Duplicity provides encrypted, versioned, remote backups that require very little of the remote server, in fact, it just needs for the server to be accessible via any of the supported protocols (FTP, SSH, Rsync, etc).
+First of all, let's just talk a little bit about the backend, that is, Duplicity. As the [Wikipedia article][3] nicely points out, Duplicity provides encrypted, versioned, remote backups that require very little of the remote server, in fact, it just needs for the server to be accessible via any of the supported protocols (FTP, SSH, Rsync, etc).
 
 
 ## Configuring Duply
@@ -58,7 +58,7 @@ For system backups, since we can only specify one source, we should use the root
     SOURCE='/'
 
 #### Excluding files
-Once we have determined our source for backups, we should filter out files or directories that would make our backups too big. We do this by creating the file `~/conf/<profile>/exclude` and listing the files inside. Thankfully, these lists accept default [Unix globbing](https://en.wikipedia.org/wiki/Globbing#Syntax). For reference, this is what's in my exclude file:
+Once we have determined our source for backups, we should filter out files or directories that would make our backups too big. We do this by creating the file `~/conf/<profile>/exclude` and listing the files inside. Thankfully, these lists accept default [Unix globbing][4]. For reference, this is what's in my exclude file:
 
 
     **/*[Cc]ache*
@@ -147,7 +147,7 @@ After that, we can check the status of our backups by running `duply <profile> s
     No orphaned or incomplete backup sets found.
     --- Finished state OK at 15:46:34.122 - Runtime 00:00:03.495 ---
 
-That looks cool and everything but we cannot rely on our memory to remember when we should make a backup. That's why we should schedule our backups using [cron](http://man.cx/cron) (or [anacron](http://anacron.sourceforge.net/), or [fcron](http://fcron.free.fr/)) and leave the heavy lifting to them.
+That looks cool and everything but we cannot rely on our memory to remember when we should make a backup. That's why we should schedule our backups using [cron][5] (or [anacron][6], or [fcron][7]) and leave the heavy lifting to them.
 
 We can either specify a time for both a full and an incremental backup, like this:
 
@@ -165,25 +165,25 @@ This is extremely useful for laptops and boxes that are not on 24x7.
 ### Pre and post scripts
 Another basic requirement for any backup solution is the option to run certain commands both before and after the backup is executed. Duply, of course, has this too and will run any command inside the file `~/.duply/<profile>/pre` before the backup and any command inside `~/.duply/<profile>/post` after the backup.
 
-This is useful to lock and flush databases before backup and unlocking them afterwards, maybe even make a [LVM snapshot](http://tldp.org/HOWTO/LVM-HOWTO/snapshots_backup.html) for consistent and quick backup. Or just to gather any other information that needs to be backed up too (f.e. installed packages, Delicious bookmarks, etc).
+This is useful to lock and flush databases before backup and unlocking them afterwards, maybe even make a [LVM snapshot][8] for consistent and quick backup. Or just to gather any other information that needs to be backed up too (f.e. installed packages, Delicious bookmarks, etc).
 
 ### Live backups
 There are some drawbacks to using the system while the backup is being run. An obvious one is the impact on performance, since the backup is using the disks.
 
 Also we have the fact that, if the backups take a while, which is very likely to happen, and the files are modified in the meantime, the verification will **fail**. That doesn't mean the backup has failed but the verification obviously will.
 
-For this, I would recommend either a [LVM snapshot](http://tldp.org/HOWTO/LVM-HOWTO/snapshots_backup.html) as suggested above which, let's face it, is not very likely to be done on anything other than a server; or we can just disable the verification and use [ionice](http://man.cx/ionice) like so:
+For this, I would recommend either a [LVM snapshot][8] as suggested above which, let's face it, is not very likely to be done on anything other than a server; or we can just disable the verification and use [ionice][9] like so:
 
     @daily    ionice -c3 duply <profile> backup_purge --force
 
 This will execute the backup with low I/O priority, which means we will be able to use the computer without much impact, and cron will still send us an email with the output of the command so we can confirm that the backup was done properly.
 
-#### More info
-
-* [**Duply**](http://duply.net/)
-* [**Duplicity**](http://duplicity.nongnu.org/)
-* [**Cron manpage**](http://man.cx/cron)
-* [**Anacron**](http://anacron.sourceforge.net/)
-* [**Fcron**](http://fcron.free.fr/)
-* [**LVM Howto**](http://tldp.org/HOWTO/LVM-HOWTO/): [13.4. Taking a Backup Using Snapshots](http://tldp.org/HOWTO/LVM-HOWTO/snapshots_backup.html)
-* [**Ionice manpage**](http://man.cx/ionice)
+[1]: http://duply.net/ "Duply"
+[2]: http://duplicity.nongnu.org/ "Duplicity"
+[3]: https://en.wikipedia.org/wiki/Duplicity_%28software%29 "Wikipedia: Duplicity (software)"
+[4]: https://en.wikipedia.org/wiki/Globbing#Syntax "Wikipedia: Globbing - Syntax"
+[5]: http://man.cx/cron "Cron manpage"
+[6]: http://anacron.sourceforge.net/ "Anacron"
+[7]: http://fcron.free.fr/ "Fcron"
+[8]: http://tldp.org/HOWTO/LVM-HOWTO/snapshots_backup.html "13.4. Taking a Backup Using Snapshots"
+[9]: http://man.cx/ionice "Ionice manpage"
