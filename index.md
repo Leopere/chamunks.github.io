@@ -16,5 +16,5 @@ tagline: aguslr.github.com
 ## My repositories
 
 * [**GNOME Shell Edge-Flipping**](http://aguslr.github.com/gnome-shell-edge-flipping/): GNOME Shell extension that provides reactive screen edges to switch between workspaces.
+* [**MultiBoot USB**](https://github.com/aguslr/multibootusb):  Grub2 loopback multiboot pen drive to boot from ISO.
 * [**Dotfiles**](https://github.com/aguslr/.dotfiles): Configuration files from my main computer.
-* [**Scripts**](https://github.com/aguslr/Scripts): Scripts made by me or tailored to my needs.
