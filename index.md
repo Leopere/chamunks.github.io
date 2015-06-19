@@ -41,7 +41,8 @@ I've worked on many MC related projects including but not limited to.
 
 ## Tools that I have experience with
 Through my time working as a project leader for many different technology intensive and highly demanding stressful situations keeping track of many moving parts I have learned how to use and abuse many tools to accomplish goals effectively and efficiently.  
-- [SaltStack](http://saltstack.com/community/)
+
+[SaltStack](http://saltstack.com/community/)
 - [Docker](https://www.docker.com)
 - [Git](https://goo.gl/YBo1nx), [GitHub](https://github.com) and [GitLab](https://gitlab.com)
 - [Jenkins](https://jenkins-ci.org)
