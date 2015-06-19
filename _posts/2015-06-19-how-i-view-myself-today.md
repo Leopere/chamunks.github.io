@@ -20,11 +20,12 @@ I have had a tendency to get involved in quite a few different things throughout
   - [Redux](#redux)
   - [Projects I've worked and my roles](#projects-ive-worked-and-my-roles)
   - [Tools that I have experience with](#tools-that-i-have-experience-with)
-  - <!-- /TOC -->
+<!-- /TOC -->
 
 
 ## Projects I've worked and my roles
 I've worked on many MC related projects including but not limited to.
+
 - [NixiumNetworks[retired]](http://nixium.com) a network project thats main aim was to unite many different MC projects under one redundant reverse proxy network.
   - We also had many of our own unique content mini-games created long before the mini-games world exploded. This was when I learned how important advertising is and how much I suck at it.
 
