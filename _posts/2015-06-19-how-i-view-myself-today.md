@@ -28,7 +28,6 @@ I've worked on many MC related projects including but not limited to.
 
 - [NixiumNetworks[retired]](http://nixium.com) a network project thats main aim was to unite many different MC projects under one redundant reverse proxy network.
   - We also had many of our own unique content mini-games created long before the mini-games world exploded. This was when I learned how important advertising is and how much I suck at it.
-
 - [BlockWorksCreative[retired]](https://www.youtube.com/watch?v=VDC1yv718W4) Enabling the startup of the Elite Premium BlockWorks creative design and build team.  Equipping them with the tools that they required and a stable building environment despite their need for heavy use of the server.
 - [TheDentedShield[ongoing]](http://thedentedshield.com) A long term ongoing development RPG server project.
 - [TheCreaturesServer[retired]](http://thecreaturehub.enjin.com/inactive) A project run by myself and my close friends, from earlier projects mentioned, for the youtube group [TheCreatureHub](https://www.youtube.com/watch?v=AZNPIsGT2MY) We made many custom game-modes and customized many popular ones.  We created our own TitanFall clone in MC in under a months time which was fairly close in Minecraft standards to the real game.
