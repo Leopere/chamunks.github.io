@@ -1,0 +1,25 @@
+---
+layout: post
+title: Past Projects
+tagline: "Projects that I've worked on."
+category: blog
+tags:
+  - blog
+  - post
+---
+
+{% include JB/setup %}
+
+# Docker
+I have grown to become very adoring of docker.  I have written and committed a few things and am planning to write and contribute much more.
+
+
+## Redux
+<!-- TOC depth:6 withLinks:1 updateOnSave:1 -->
+- [Docker](#docker)
+	- [Redux](#redux)
+	- [](#)
+<!-- /TOC -->
+
+
+## 
