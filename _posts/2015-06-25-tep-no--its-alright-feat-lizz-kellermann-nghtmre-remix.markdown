@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "testing-jekyll-atom-integration"
+title: "Tep No - It's Alright"
+tagline: "(feat. Lizz Kellermann) (NGHTMRE Remix)"
 date: "2015-06-25"
-category: indev
+category: music
 tags:
-  - tests
+  - music
+  - what I enjoy
 ---
-# Tep No - It's Alright (feat. Lizz Kellermann) (NGHTMRE Remix)
-
 [![Video Label](http://img.youtube.com/vi/4JD6vnJghpc/0.jpg)](https://www.youtube.com/watch?v=4JD6vnJghpc)
