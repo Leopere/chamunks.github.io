@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Chamunks
-tagline: chamunks.github.com
+tagline: "https : // chamunks . github . com"
 ---
 
 {% include JB/setup %}
@@ -17,6 +17,7 @@ I have had a tendency to get involved in quite a few different things throughout
   - [Redux](#redux)
   - [Projects I've worked and my roles](#projects-ive-worked-and-my-roles)
   - [Tools that I have experience with](#tools-that-i-have-experience-with)
+
 <!-- /TOC -->
 
 
